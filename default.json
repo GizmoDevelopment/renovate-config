@@ -10,7 +10,15 @@
 	"rangeStrategy": "bump",
 	"packageRules": [
 		{
-			"matchUpdateTypes": ["minor", "patch"],
+			"matchDepTypes": [
+				"dependencies",
+				"devDependencies",
+				"optionalDependencies",
+				"peerDependencies",
+				"engines",
+				"packageManager"
+			],
+			"matchUpdateTypes": [ "minor", "patch" ],
 			"matchCurrentVersion": "!/^0/",
 			"automerge": true,
 			"automergeType": "branch",
